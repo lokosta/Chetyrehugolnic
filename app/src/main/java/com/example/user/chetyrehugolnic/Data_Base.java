@@ -215,7 +215,7 @@ public class Data_Base implements database {
 
         JSONObject json,js;
         JSONArray jsO;
-        StringBuffer buffer=new StringBuffer();//?
+        StringBuffer buffer=new StringBuffer();
         HttpURLConnection urlConnection=null;
         BufferedReader reader=null;
         //получаем данные с внешнего ресурса
@@ -235,7 +235,7 @@ public class Data_Base implements database {
 
 
             OutputStream outputstream=urlConnection.getOutputStream(); //посылаем данные(метод "POST")
-            outputstream.write(json.toString().getBytes("UTF-8"));//?
+            outputstream.write(json.toString().getBytes("UTF-8"));
             outputstream.close();
 
             InputStream inputstream=urlConnection.getInputStream();//получаем данные
