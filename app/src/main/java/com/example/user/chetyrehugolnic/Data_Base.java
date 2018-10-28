@@ -62,7 +62,7 @@ public class Data_Base implements database {
             json.put("info",users.getInfo());
 
             OutputStream outputstream=urlConnection.getOutputStream(); //посылаем данные(метод "POST")
-            outputstream.write(json.toString().getBytes("UTF-8"));//?
+            outputstream.write(json.toString().getBytes("UTF-8"));
             outputstream.close();
 
             InputStream inputstream=urlConnection.getInputStream();//получаем данные
