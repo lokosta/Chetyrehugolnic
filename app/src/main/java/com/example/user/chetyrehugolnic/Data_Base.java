@@ -39,7 +39,7 @@ public class Data_Base implements database {
     @Override
     public void UpdateUserdata(CUsers users) {
         JSONObject json;
-        StringBuffer buffer=new StringBuffer();//?
+        StringBuffer buffer=new StringBuffer();
         HttpURLConnection urlConnection=null;
         BufferedReader reader=null;
         try{
@@ -90,7 +90,7 @@ public class Data_Base implements database {
     public void NewPassword(String email) {
 
         JSONObject json;
-        StringBuffer buffer=new StringBuffer();//?
+        StringBuffer buffer=new StringBuffer();
         HttpURLConnection urlConnection=null;
         BufferedReader reader=null;
         try{
@@ -108,7 +108,7 @@ public class Data_Base implements database {
 
 
             OutputStream outputstream=urlConnection.getOutputStream(); //посылаем данные(метод "POST")
-            outputstream.write(json.toString().getBytes("UTF-8"));//?
+            outputstream.write(json.toString().getBytes("UTF-8"));
             outputstream.close();
 
             InputStream inputstream=urlConnection.getInputStream();//получаем данные
@@ -202,10 +202,7 @@ public class Data_Base implements database {
         return null;
     }
 
-    //@Override
-    //public CRecords getRecordsdata(String coloumn, String arg) {
-  //      return null;
-   // }
+  
 
     @Override
     public CGroups getGroupsdata(String coloumn, String arg) {
@@ -268,7 +265,7 @@ public class Data_Base implements database {
         //login l=new login();
         JSONObject json,js;
         JSONArray jsO;
-        StringBuffer buffer=new StringBuffer();//?
+        StringBuffer buffer=new StringBuffer();
         HttpURLConnection urlConnection=null;
         BufferedReader reader=null;
         //получаем данные с внешнего ресурса
@@ -342,7 +339,7 @@ public class Data_Base implements database {
             json.put("info","info");
 
             OutputStream outputstream=urlConnection.getOutputStream(); //посылаем данные(метод "POST")
-            outputstream.write(json.toString().getBytes("UTF-8"));//?
+            outputstream.write(json.toString().getBytes("UTF-8"));
             outputstream.close();
 
             InputStream inputstream=urlConnection.getInputStream();//получаем данные
@@ -367,7 +364,6 @@ public class Data_Base implements database {
         boolean b=jsO.getBoolean("znachenie");
         return b;
 
-    //возможно не та скобка
 
     }
 
@@ -396,7 +392,7 @@ public class Data_Base implements database {
                 json.put("Table_Name", Table_Name);
 
                 OutputStream outputstream = urlConnection.getOutputStream(); //посылаем данные(метод "POST")
-                outputstream.write(json.toString().getBytes("UTF-8"));//?
+                outputstream.write(json.toString().getBytes("UTF-8"));
                 outputstream.close();
 
                 InputStream inputstream = urlConnection.getInputStream();//получаем данные
@@ -422,7 +418,7 @@ public class Data_Base implements database {
     @Override
     public void Srec(String title, int user_id, int random_id) {
         JSONObject json;
-        StringBuffer buffer=new StringBuffer();//?
+        StringBuffer buffer=new StringBuffer();
         HttpURLConnection urlConnection=null;
         BufferedReader reader=null;
         try{
